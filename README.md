@@ -1,38 +1,41 @@
-AI Resume Analyzer
+📄 AI Resume Analyzer
 
-An AI-powered Resume Screening system that compares a candidate’s resume with a Job Description (JD) and decides whether the candidate should be shortlisted or rejected.
+AI Resume Analyzer is an AI-powered project that compares a candidate’s resume with a Job Description (JD) and decides whether the candidate should be shortlisted or rejected.
 
-🧠 How it Works (LangChain + Cohere Pipeline)
+🧠 How It Works (LangChain + Cohere Pipeline)
 
-When a resume is uploaded, the system uses LangChain + Cohere to understand and compare the resume with the Job Description.
+When a resume is uploaded, the system uses LangChain and Cohere to understand and compare the resume with the Job Description.
 
 📄 1. Resume Processing
-PDF resume is uploaded by the user
-PyPDFLoader extracts text from the resume
-Text is broken into smaller chunks using RecursiveCharacterTextSplitter
+A PDF resume is uploaded by the user.
+PyPDFLoader extracts text from the resume.
+The extracted text is split into smaller chunks using RecursiveCharacterTextSplitter.
 🔍 2. Embeddings (Cohere)
-Each text chunk is converted into vectors using Cohere Embeddings
-Helps system understand meaning, not just keywords
+Each text chunk is converted into embeddings using Cohere Embeddings.
+This helps the system understand the meaning of the text instead of just keywords.
 
-👉 Enables semantic search instead of keyword matching
+👉 This enables semantic search instead of simple keyword matching.
 
 📦 3. Vector Storage (FAISS)
-Resume chunks are stored in FAISS vector database
-Allows fast retrieval of relevant sections based on JD
+All resume chunks are stored in a FAISS vector database.
+FAISS allows fast and efficient similarity search.
 📌 4. Similarity Search
-Job Description is also converted into embeddings
-FAISS finds most relevant resume sections
+The Job Description is also converted into embeddings.
+FAISS retrieves the most relevant parts of the resume that match the JD.
 🤖 5. LLM Analysis (Cohere Chat Model)
-Relevant resume + JD context is sent to Cohere LLM
-Acts like a strict recruiter
-Evaluates:
-Skills match
+Relevant resume context and JD are sent to the Cohere LLM.
+The model acts like a strict technical recruiter.
+It evaluates:
+Skill match
 Missing skills
 Experience gaps
-Overall fit
+Overall suitability
 📊 6. Final Output
-Match Score
-Verdict (REJECTED / SHORTLISTED)
+
+The model returns:
+
+Match Score (0–100%)
+Verdict: REJECTED / SHORTLISTED
 Missing Skills
 Reasoning
 ⚡ Tech Stack
@@ -40,5 +43,5 @@ Python
 FastAPI (Backend)
 Streamlit (Frontend)
 LangChain
-Cohere LLM + Embeddings
-FAISS
+Cohere (Embeddings + LLM)
+FAISS (Vector Database)
