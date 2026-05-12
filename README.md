@@ -10,18 +10,98 @@ When a resume is uploaded, the system uses LangChain and Cohere to understand an
 A PDF resume is uploaded by the user.
 PyPDFLoader extracts text from the resume.
 The text is split into smaller chunks using RecursiveCharacterTextSplitter.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 🔍 2. Embeddings (Cohere)
 Each text chunk is converted into embeddings using Cohere Embeddings.
 This helps the system understand meaning instead of just keywords.
 
 👉 Enables semantic matching instead of keyword matching.
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 📦 3. Vector Storage (FAISS)
 All resume chunks are stored in a FAISS vector database.
 FAISS enables fast similarity search based on Job Description.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 📌 4. Similarity Search
 Job Description is also converted into embeddings.
 FAISS retrieves the most relevant resume sections matching the JD.
+
+
+
+
+
+
+
+
+
+
 🤖 5. LLM Analysis (Cohere Chat Model)
 Relevant resume context + JD is sent to Cohere LLM.
 The model acts like a strict technical recruiter.
