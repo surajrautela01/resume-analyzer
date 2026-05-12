@@ -195,6 +195,35 @@ FastAPI (Backend)
 
 
 Streamlit (Frontend)
+
+
+
+
+
+
+
+
+
+
+
 LangChain
 Cohere (Embeddings + LLM)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 FAISS (Vector Database)
