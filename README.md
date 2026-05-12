@@ -152,8 +152,48 @@ streamlit run app.py
 
 
 ⚡ Tech Stack
+
+
+
+
+
+
+
+
+
+
 Python
 FastAPI (Backend)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Streamlit (Frontend)
 LangChain
 Cohere (Embeddings + LLM)
