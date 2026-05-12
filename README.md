@@ -38,6 +38,10 @@ Match Score (0–100%)
 Verdict: REJECTED / SHORTLISTED
 Missing Skills
 Reasoning
+
+
+
+
 ⚙️ How to Run the Project
 
 1. Create .env file
