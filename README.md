@@ -132,10 +132,25 @@ COHERE_API_KEY=your_cohere_api_key_here
 
 👉 You can create your API key from: https://dashboard.cohere.com/
 
+
+
+
+
+
+
 2. Run Backend (FastAPI)
 uvicorn main:app --reload --port 8001
 3. Run Frontend (Streamlit)
 streamlit run app.py
+
+
+
+
+
+
+
+
+
 ⚡ Tech Stack
 Python
 FastAPI (Backend)
